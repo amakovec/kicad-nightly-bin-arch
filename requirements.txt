@@ -1,0 +1,4 @@
+launchpadlib
+requests
+jinja2
+dulwich

@@ -66,8 +66,8 @@ def pkgbuild_gen(version, binary_url, env_path):
     env_sum = local_sha256sum(env_path)
 
     jinja_wrapper(
-        template_file="PKGBUILD.template",
-        output_file="PKGBUILD",
+        template_filename="PKGBUILD.template",
+        output_filename="PKGBUILD",
         version=version,
         binary_url=binary_url,
         binary_sha256sum=binary_sum,
@@ -75,8 +75,8 @@ def pkgbuild_gen(version, binary_url, env_path):
     )
 
     jinja_wrapper(
-        template_file=".SRCINFO.template",
-        output_file=".SRCINFO",
+        template_filename=".SRCINFO.template",
+        output_filename=".SRCINFO",
         version=version,
         binary_url=binary_url,
         binary_sha256sum=binary_sum,

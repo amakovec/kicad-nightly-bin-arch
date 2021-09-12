@@ -51,7 +51,7 @@ def jinja_wrapper(template_filename, output_filename, **kwargs):
         f.write(outputText)
 
 
-def pkgbuild_gen(version, binary_url, env_path):
+def pkgbuild_gen(version, pkgrel, binary_url, env_path):
     """
     Generate PKGBUILD and .SRCINFO with latest build info
 
@@ -69,6 +69,7 @@ def pkgbuild_gen(version, binary_url, env_path):
         template_filename="PKGBUILD.template",
         output_filename="PKGBUILD",
         version=version,
+        pkgrel=pkgrel,
         binary_url=binary_url,
         binary_sha256sum=binary_sum,
         env_sha256sum=env_sum,
@@ -78,6 +79,7 @@ def pkgbuild_gen(version, binary_url, env_path):
         template_filename=".SRCINFO.template",
         output_filename=".SRCINFO",
         version=version,
+        pkgrel=pkgrel,
         binary_url=binary_url,
         binary_sha256sum=binary_sum,
         env_sha256sum=env_sum,

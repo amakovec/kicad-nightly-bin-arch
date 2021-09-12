@@ -7,5 +7,5 @@ def get_aur_version():
     )
     json_data = response.json()
     package_version = json_data["results"][0]["Version"]
-    package_version = package_version.split("-")[0]
-    return package_version
+    package_version, pkgrel = package_version.split("-")[:2]
+    return package_version, pkgrel

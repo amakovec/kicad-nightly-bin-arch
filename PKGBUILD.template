@@ -15,7 +15,7 @@ optdepends=(
 	'kicad-library-nightly: for footprints and symbols'
 	'kicad-library-3d-nightly: for 3d models of components'
 )
-pkgrel=1
+pkgrel={{ pkgrel }}
 source=(
     '{{ binary_url }}'
     'kicad-nightly.env'

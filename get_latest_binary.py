@@ -17,8 +17,10 @@ def get_latest_binary():
 
     # Generic ubuntu information
     ubuntu = launchpad.distributions["ubuntu"]
-    #series = ubuntu.current_series
-    series = ubuntu.getSeries(name_or_version="hirsute") # use hirsute until Arch updates to glibc-2.34
+    # series = ubuntu.current_series
+    series = ubuntu.getSeries(
+        name_or_version="hirsute"
+    )  # use hirsute until Arch updates to glibc-2.34
     arch_series = series.getDistroArchSeries(archtag="amd64")
 
     # see "getPublishedBinaries" under https://launchpad.net/+apidoc/devel.html#archive
